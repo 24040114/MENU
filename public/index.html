@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App: Promedio y Divisas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <button class="nav-btn" onclick="mostrarSeccion('seccion-moneda')">CONVERSOR USD</button>
+        <button class="nav-btn" onclick="mostrarSeccion('seccion-notas')">CALIFICACIONES</button>
+    </nav>
+
+    <div class="container">
+        
+        <section id="seccion-moneda" class="modulo">
+            <h1>Conversor de Moneda</h1>
+            <div class="form-group">
+                <input type="number" id="cantidadMXN" placeholder="Cantidad en Pesos (MXN)" step="0.01">
+                
+                <div class="resultados">
+                    <label>Resultado en USD:</label>
+                    <input type="text" id="resultadoUSD" placeholder="$0.00" readonly>
+                </div>
+
+                <button type="button" id="btnConvertirMoneda" class="btn-neon">CONVERTIR</button>
+            </div>
+        </section>
+
+        <section id="seccion-notas" class="modulo" style="display: none;">
+            <h1>Promedio de Unidades</h1>
+            <div class="form-group">
+                <input type="number" id="unidad1" placeholder="Nota Unidad 1" step="0.1">
+                <input type="number" id="unidad2" placeholder="Nota Unidad 2" step="0.1">
+                <input type="number" id="unidad3" placeholder="Nota Unidad 3" step="0.1">
+                
+                <div class="resultados">
+                    <label>Promedio:</label>
+                    <input type="text" id="promedioRes" readonly placeholder="0.00">
+                    <label>Estatus:</label>
+                    <input type="text" id="estatusRes" readonly placeholder="---">
+                </div>
+
+                <button type="button" id="btnCalcularNotas" class="btn-neon">CALCULAR PROMEDIO</button>
+            </div>
+        </section>
+
+        <button type="button" id="btnLimpiarTodo" class="btn-secondary">LIMPIAR TODO</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
